@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板</title>
+</head>
+<body>
+<h1>这是第一个模板</h1>
+<h1>
+    姓名：{{ username }}
+    年龄：{{ age }}
+</h1>
+<h1>
+    lst:{{ lis }}
+</h1>
+<h1>
+    lis第一个元素：{{ lis.0 }}
+</h1>
+<h1>
+    dict: {{ d }}
+</h1>
+<h1>
+    dict['title']: {{ d.title }}
+</h1>
+<h1>
+    func:{{ func }}
+</h1>
+
+<h1>
+    class_obj:{{ class_obj.say }}
+</h1>
+<!--<h1>script:{{ script|safe }}</h1>-->
+{% if age >= 18 %}
+    <h1> 成年人 </h1>
+{% else %}
+    <h1> 未成年 </h1>
+{% endif %}
+
+<h3>循环演示</h3>
+{% for i in lis %}
+{% if forloop.first %}-----{% endif %}
+<p>{{ forloop.rmcounter0 }} 姓名：{{ i }}</p>
+{% if forloop.last %}++++++{% endif %}
+{% endfor %}
+
+
+
+
+</body>
+</html>
