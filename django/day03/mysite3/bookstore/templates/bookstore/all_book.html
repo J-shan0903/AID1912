@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍表</title>
+</head>
+<body>
+<a href="#">添加书籍</a>
+<table border="1">
+
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>pub</th>
+        <th>price</th>
+        <th>market_price</th>
+        <th>op</th>
+    </tr>
+
+{% for book in all_book %}
+<tr>
+    <td>{{ book.id }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.pub }}</td>
+    <td>{{ book.price }}</td>
+    <td>{{ book.market_price }}</td>
+    <td>
+        <a href="/bookstore/update_book/{{ book.id }}">跟新</a>
+        <a href="/bookstore/delete_book/{{ book.id }}">删除</a>
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+
+
+
+</body>
+</html>

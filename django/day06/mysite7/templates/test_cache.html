@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板层缓存</title>
+</head>
+<body>
+
+{% load cache %}
+{% cache 60 test6 %}
+
+<p>
+   缓存 {{ t1 }}
+</p>
+
+{% endcache %}
+
+<p>
+  未缓存  {{ t1 }}
+</p>
+
+
+</body>
+</html>
