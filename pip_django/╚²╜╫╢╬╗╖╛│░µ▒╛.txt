@@ -1,0 +1,22 @@
+3阶段后端 pip相关库整理
+Django==1.11.8
+django-cors-headers==3.0.2
+django-redis==4.10.0
+redis==3.3.11
+PyMySQL==0.9.3
+celery==4.3.0
+PyJWT==1.7.1
+uWSGI==2.0.18
+requests==2.22.0
+python-alipay-sdk==2.0.1
+
+以上为python库
+
+
+###################
+以下为重要第三方组件
+nginx 1.14.0
+mysql 5.7.29
+redis 4.0.9
+
+
